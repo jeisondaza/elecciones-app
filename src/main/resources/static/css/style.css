@@ -1,0 +1,147 @@
+:root{
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    font-family: var(--font-family);
+    background-color: lightsteelblue;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    align-items: flex-end;
+}
+.home img{
+    height: 100%;
+    min-width: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+.home h1{
+    padding-left: 5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 6rem;
+    margin-bottom: 15rem;
+}
+/* Estilos barra menú */
+.links{
+    padding: 1.5rem;
+    top: 0;
+    position: sticky;
+    background-color: black;
+}
+.links ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu{
+    padding: 1rem;
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu:hover{
+    border-radius: 5px;
+    background-color: grey;
+}
+.consultar{
+    padding-block: 3rem;
+}
+.consultar__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.consultar__label, .consultar__cc{
+    margin-inline: 1rem;
+    font-size: 2rem;
+}
+.consultar__cc{
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    padding-inline: 1rem;
+    height: 4rem;
+    width: 30%;
+}
+.consultar__cc[type=number]::-webkit-inner-spin-button, 
+.consultar__cc[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.consultar__cc:focus{
+    outline: none;
+    border: 2px solid dodgerblue;
+}
+.consultar__btn{
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: dodgerblue;
+    padding: 1.5rem;
+
+}
+.consultar__btn:hover{
+    border: none;
+    background-color: rgb(21, 79, 138);
+}
+.consultar__btn:active{
+    border: none;
+    background-color: darkblue;
+}
+/* Estilos candidatos */
+.candidatos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4rem;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+}
+.card{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(32, 32, 32, 0.76);
+    padding: 2rem;
+    transition: box-shadow 0.4s;
+}
+.left{
+    flex-direction: row-reverse;
+}
+.candidatos h1{
+    font-size: 7rem;
+}
+.candidatos h3{
+    font-size: 2rem;
+}
+.candidatos img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-block: 1.5rem;
+}
+.candidatos p{
+    padding: 3.5rem 2rem;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{../../css/form.css}">
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+</head>
+
+<body>
+    <center>
+        <h1>Registro de votos</h1>
+        <form action="">
+            <fieldset>
+                <legend>Registro de datos</legend>
+                <select name="candidatos">
+                    <option value="" selected>Selecione un candidato</option>
+                    <option value="candidato1">Gustavo Petro</option>
+                    <option value="candidato2">Sergio Fajardo</option>
+                    <option value="candidato3">María Fernanda Cabal</option>
+                    <option value="candidato4">Juan Manuel Galán</option>
+                </select><br><br>
+                <input type="text" list="items" placeholder="Selecione una región">
+                <datalist id="items">
+                    <option value="Bogotá"></option>
+                    <option value="Antioquia"></option>
+                    <option value="Caribe"></option>
+                    <option value="Centro"></option>
+                </datalist><br><br>
+                <input type="number" placeholder="Digite el número de votos"><br><br>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </center><br><br><br>
+</body>
+
+</html>

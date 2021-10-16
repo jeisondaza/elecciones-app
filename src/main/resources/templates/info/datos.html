@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <link rel="stylesheet" th:href="@{/css/datos.css}">
+    <meta charset="UTF-8">
+    <title>Consultar Datos</title>
+</head>
+
+<body>
+    <h1>Consultar Datos</h1>
+    <table th:object="${data}">
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Móvil</th>
+                <th>Dirección</th>
+                <th>Municipio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td th:text="${data.RegIdenti}"></td>
+            <td th:text="${data.RegName}"></td>
+            <td th:text="${data.RegLastN}"></td>
+            <td th:text="${data.RegEmail}"></td>
+            <td th:text="${data.RegMobile}"></td>
+            <td th:text="${data.RegDirection}"></td>
+            <td th:text="${data.RegTown}"></td>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<!-- th:text="${data.RegIdenti}"
+th:text="${data.RegName}"
+th:text="${data.RegLastN}"
+th:text="${data.RegEmail}"
+th:text="${data.RegMobile}"
+th:text="${data.RegDirection}"
+th:text="${data.RegTown}" -->

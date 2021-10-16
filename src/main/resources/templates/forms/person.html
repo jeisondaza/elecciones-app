@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <link rel="stylesheet" th:href="@{/css/style_singUp.css}">
+    <meta charset="UTF-8">
+    <title>Votaciones</title>
+</head>
+
+<body>
+    <h1>Registro de votantes</h1>
+    <a th:href="@{/votapp}" class="irMenu">ir a inicio</a>
+    <form th:action="@{/singUp}" method="post" th:object="${formulario}">
+        <fieldset class="form__contr">
+            <legend>Datos personales</legend>
+            <input type="number" th:fiel="*{RegIdenti}" name="RegIdenti" id="RegIdenti" placeholder="CC" required>
+            <input type="text" th:fiel="*{RegName}" name="RegName" id="regName" placeholder="Nombres" required>
+            <input type="text" th:fiel="*{RegLastN}" name="RegLastN" id="RegLastN" placeholder="Apellidos" required>
+            <input type="text" th:fiel="*{RegEmail}" name="RegEmail" id="RegEmail" placeholder="Email" required>
+            <input type="number" th:fiel="*{RegMobile}" name="RegMobile" id="RegMobile" placeholder="Teléfono" required>
+            <input type="text" th:fiel="*{RegDirection}" name="RegDirection" id="RegDirection" placeholder="Dirección" required>
+            <select th:fiel="*{regTown}" name="RegTown" id="RegTown" required>
+                <option value="Bogotá">Bogotá D.C.</option>
+                <option value="Soacha">Soacha</option>
+                <option value="Cúcuta">Cúcuta</option>
+                <option value="Bucaramanga">Bucaramanga</option>
+                <option value="Cali">Cali</option>
+            </select>
+            <input type="submit" value="Enviar" class="form__btn">
+        </fieldset>
+    </form>
+</body>
+
+</html>

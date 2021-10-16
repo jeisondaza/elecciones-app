@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style_votar.css}">
+    <title>Reto 4</title>
+</head>
+
+<body>
+    <h1 class="title titlePrincipal">PUESTO DE VOTACIÓN #1</h1>
+    <section class="card__section">
+        <article class="card__container">
+            <div class="card">
+                <h2>Gustavo Petro</h2>
+                <img class="card__img" src="https://pbs.twimg.com/profile_images/962471262747529216/Uo8lOkRJ.jpg"
+                    alt="Candidato 1">
+                <button class="card__btn" onclick="votar('1')">Votar</button>
+            </div>
+            <p class="card__count"></p>
+        </article>
+        <article class="card__container">
+            <div class="card">
+                <h2>Oscar Iván Zuluaga</h2>
+                <img class="card__img"
+                    src="https://d2yoo3qu6vrk5d.cloudfront.net/images/20210812115120/oscar-420x278.webp"
+                    alt="Candidato 2">
+                <button class="card__btn" onclick="votar('2')">Votar</button>
+            </div>
+            <p class="card__count"></p>
+        </article>
+        <article class="card__container">
+            <div class="card">
+                <h2>Rodolfo Hernández</h2>
+                <img class="card__img"
+                    src="https://colombiacheck.s3.us-east-2.amazonaws.com/colcheck/s3fs-public/2019-05/Perfil%20Roodolfo%20Hern%C3%A1ndez.jpg?VHsnVz0MUU9W35Kos.QGOw9uhirq3VRJ"
+                    alt="Candidato 3">
+                <button class="card__btn" onclick="votar('3')">Votar</button>
+            </div>
+            <p class="card__count"></p>
+        </article>
+        <article class="card__container">
+            <div class="card">
+                <h2>Sergio Fajardo</h2>
+                <img class="card__img"
+                    src="https://www.ecosdelcombeima.com/sites/default/files/sergio-fajardo-invamer-encuesta-septiembre-e1506720936475-1.png"
+                    alt="Candidato 4">
+                <button class="card__btn" onclick="votar('4')">Votar</button>
+            </div>
+            <p class="card__count"></p>
+        </article>
+    </section>
+    <div class="container__btn">
+        <button class="finalBtn" onclick="redBtn()">Finalizar Votación</button>
+    </div>
+    <section class="table__container">
+        <h2 class="title titleTable">Tabla de resultados</h2>
+        <table class="table">
+            <thead class="table_header">
+                <tr>
+                    <th>Candidato 1</th>
+                    <th>Candidato 2</th>
+                    <th>Candidato 3</th>
+                    <th>Candidato 4</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody class="table__body">
+                <tr>
+                    <td class="cell" data-th="Candidato 1 "></td>
+                    <td class="cell" data-th="Candidato 2 "></td>
+                    <td class="cell" data-th="Candidato 3 "></td>
+                    <td class="cell" data-th="Candidato 4 "></td>
+                    <td class="cell" data-th="Total"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script th:src="@{/JS/main.js}"></script>
+</body>
+
+</html>
